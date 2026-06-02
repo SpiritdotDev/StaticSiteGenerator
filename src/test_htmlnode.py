@@ -5,7 +5,6 @@ from textnode import text_node_to_html_node, TextNode, TextType
 class TestHTMLNode(unittest.TestCase):
     def test_format(self):
         node = HTMLNode("p", "some info",props= {"text": "blah", "key": "value"} )
-        print(node.props_to_html())
     
     def test_empty(self):
         node = HTMLNode()
@@ -14,7 +13,6 @@ class TestHTMLNode(unittest.TestCase):
     def test_children(self):
         node1 = HTMLNode()
         node2 = HTMLNode("p", value=None, children=[node1])
-        print(node2)
 
     def test_leaf_to_html_p(self):
         node = LeafNode("p", "Hello, world!")
