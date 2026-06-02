@@ -16,7 +16,7 @@ def copy_directory(source_dir, target_dir):
 
 
 def main():
-    basepath = sys.argv
+    basepath = sys.argv[1]
     if basepath == None:
         basepath = "/"
     copy_directory("static", "docs")
