@@ -14,7 +14,7 @@ class HTMLNode():
         else:
             formatted_props = ""
             for key, value in self.props.items():
-                formatted_props += f" {key}={value}"
+                formatted_props += f' {key}="{value}"'
             return formatted_props
             
     def __repr__(self):
@@ -51,4 +51,4 @@ class ParentNode(HTMLNode):
             children_html = ""
             for child in self.children:
                 children_html += child.to_html()
-        return f"<{self.tag}>{children_html}</{self.tag}>"
+        return f"<{self.tag}{self.props_to_html()}>{children_html}</{self.tag}>"
